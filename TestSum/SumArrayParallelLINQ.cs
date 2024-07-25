@@ -16,8 +16,8 @@ namespace DZ_ParallelLINQ.TestSum
            
             try
             {
-                int chunkSize = array.Length /10;
-                for (int i = 0; i <9; i++)
+                int chunkSize = array.Length /20;
+                for (int i = 0; i <21; i++)
                 {
                     long sum1 = 0;
                     int startIndex = i * chunkSize;
