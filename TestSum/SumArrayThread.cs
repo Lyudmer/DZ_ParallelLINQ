@@ -8,9 +8,9 @@ namespace DZ_ParallelLINQ.TestSum
 {
    public class SumArrayThread
    {
-        public static int RunSum(int[] array,int threadCount)
+        public static long RunSum(int[] array,int threadCount)
         {
-            int sum = 0;
+            long sum = 0;
             int chunkSize = array.Length / threadCount;
 
             List<Thread> threads = new List<Thread>();
@@ -22,7 +22,7 @@ namespace DZ_ParallelLINQ.TestSum
 
                 Thread thread = new(() =>
                 {
-                    int localSum = 0;
+                    long localSum = 0;
                     for (int j = startIndex; j < endIndex; j++)
                     {
                         localSum += array[j];
