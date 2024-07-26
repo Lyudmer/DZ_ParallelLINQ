@@ -16,15 +16,15 @@ namespace DZ_ParallelLINQ.TestSum
            
             try
             {
-                int chunkSize = array.Length;
-                //for (int i = 0; i <9; i++)
+                //int chunkSize = array.Length/8;
+                //for (int i = 0; i < 9; i++)
                 //{
                 //    long sum1 = 0;
                 //    int startIndex = i * chunkSize;
-                //    sum1 = array.AsParallel().Skip(startIndex).Take(chunkSize).Sum(x=>(long)x);
+                //    sum1 = array.AsParallel().Skip(startIndex).Take(chunkSize).Sum(x => (long)x);
                 //    res += sum1;
                 //}
-                res = array.AsParallel().Sum(x => (long)x);
+                 res = array.AsParallel().Sum(x => (long)x);
                 // Parallel.ForEach(array, x => Interlocked.Add(ref res, x));
             }
             catch (AggregateException ex)
